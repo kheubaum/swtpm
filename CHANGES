@@ -1,5 +1,25 @@
 CHANGES - changes for swtpm
 
+version 0.5.0:
+  - swtpm-localca:
+    - Rewritten in python
+    - Add --password parameter for older GnuTLS versions
+    - Add support for pkcs11 module environment variables to config file
+    - pkcs11: Also allow signingkey_password to be used not just 'SWTPM_PKCS11_PIN'
+  - swtpm_setup:
+    - Do not hardcode '/etc' but use SYSCONFDIR
+    - Fix support for -h and -? options
+    - Add missing .config path when using ${HOME}
+    - Get rid of 'c' wrapper switching the user and move into python code
+  - swtpm-localca:
+    - Apply password for signing key when creating platform cert
+    - Properly apply passwords for localca signing key
+  - build-sys:
+    - Use -Wl,-z,relro and -Wl,-z,now only when linking (clang)
+    - Use AC_LINK_IFELSE to check whether support for hardening flags
+    - make pip dependency check non-fatal
+    - add configure option to disable installation of Python module
+
 version 0.4.0:
   - swtpm:
     - Invoke print capabilities after choosing TPM version
