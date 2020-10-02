@@ -1,6 +1,6 @@
 %bcond_without gnutls
 
-%global gitdate     20200828
+%global gitdate     20201002
 %global gitcommit   enter_commit_here
 %global gitshortcommit  %(c=%{gitcommit}; echo ${c:0:7})
 
@@ -183,6 +183,9 @@ fi
 %{_datadir}/swtpm/swtpm-create-tpmca
 
 %changelog
+* Fri Oct 2 2020 Stefan Berger <stefanb@linux.ibm.com> - 0.5.0-0.20201002git-------
+- v0.5.0 release
+
 * Fri Aug 28 2020 Stefan Berger <stefanb@linux.ibm.com> - 0.4.0-20200218git-------
 - v0.4.0 release
 
